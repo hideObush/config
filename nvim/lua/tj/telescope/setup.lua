@@ -136,7 +136,7 @@ require("telescope").setup {
 -- pcall(require("telescope").load_extension, "arecibo")
 -- require("telescope").load_extension "flutter"
 require("telescope").load_extension "dap"
-require("telescope").load_extension "notify"
+-- require("telescope").load_extension "notify"
 
 -- pcall(require("telescope").load_extension, "fzy_native")
 require("telescope").load_extension "fzf"

@@ -149,10 +149,12 @@ local servers = {
       "--clang-tidy",
       "--header-insertion=iwyu",
     },
+    -- client.notify("workspace/didChangeConfiguration"),
     -- Required for lsp-status
     init_options = {
       clangdFileStatus = true,
     },
+    -- root_dir = root_pattern("compile_commands.json","compile_flags.txt",".git") or dirname,
     handlers = nvim_status.extensions.clangd.setup(),
   },
 

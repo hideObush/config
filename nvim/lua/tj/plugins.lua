@@ -97,10 +97,10 @@ return require("packer").startup {
     -- use "glepnir/lspsaga.nvim"
     -- https://github.com/rmagatti/goto-preview
 
-    use {
-      "akinsho/flutter-tools.nvim",
-      ft = { "flutter", "dart" },
-    }
+    -- use {
+    --   "akinsho/flutter-tools.nvim",
+    --   ft = { "flutter", "dart" },
+    -- }
 
     -- use "simrat39/rust-tools.nvim"
     -- use "ray-x/go.nvim"
@@ -118,7 +118,6 @@ return require("packer").startup {
       end,
     }
 
-    use "rcarriga/nvim-notify"
 
     -- TODO: Investigate
     -- use 'jose-elias-alvarez/nvim-lsp-ts-utils'
@@ -231,10 +230,10 @@ return require("packer").startup {
     -- STREAM: Could probably make this a bit better. Definitely needs docs
     -- use "tjdevries/fold_search.vim"
 
-    use {
-      "tweekmonster/haunted.vim",
-      cmd = "Haunt",
-    }
+    -- use {
+    --   "tweekmonster/haunted.vim",
+    --   cmd = "Haunt",
+    -- }
 
     use {
       "tpope/vim-scriptease",
@@ -321,19 +320,10 @@ return require("packer").startup {
     use { "iamcco/markdown-preview.nvim", ft = "markdown", run = "cd app && yarn install" }
 
     -- Typescript
-    if false then
-      use "jelera/vim-javascript-syntax"
-      use "othree/javascript-libraries-syntax.vim"
-      use "leafgarland/typescript-vim"
-      use "peitalin/vim-jsx-typescript"
-
-      use { "vim-scripts/JavaScript-Indent", ft = "javascript" }
-      use { "pangloss/vim-javascript", ft = { "javascript", "html" } }
 
       -- Godot
       use "habamax/vim-godot"
       --
-    end
 
     -- Wonder if I can make LSP do this and respect .prettier files.
     --  I don't write enough typescript to think about this.
@@ -349,9 +339,9 @@ return require("packer").startup {
     use "tpope/vim-liquid"
 
     -- Sql
-    use "tpope/vim-dadbod"
-    use { "kristijanhusak/vim-dadbod-completion" }
-    use { "kristijanhusak/vim-dadbod-ui" }
+    -- use "tpope/vim-dadbod"
+    -- use { "kristijanhusak/vim-dadbod-completion" }
+    -- use { "kristijanhusak/vim-dadbod-ui" }
 
     --
     -- Lisp
@@ -407,6 +397,7 @@ return require("packer").startup {
     -- use 'puremourning/vimspector'
     use "mfussenegger/nvim-dap"
     use "rcarriga/nvim-dap-ui"
+    use "rcarriga/nvim-notify"
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
     use "nvim-telescope/telescope-dap.nvim"
@@ -548,6 +539,8 @@ return require("packer").startup {
     use { "junegunn/fzf", run = "./install --all" }
     use { "junegunn/fzf.vim" }
 
+    use "p00f/godbolt.nvim"
+
     if false and vim.fn.executable "neuron" == 1 then
       use {
         "oberblastmeister/neuron.nvim",
@@ -587,8 +580,10 @@ return require("packer").startup {
     -- It would be fun to think about making a wiki again...
     -- local_use 'wander.nvim'
     -- local_use 'riki.nvim'
+    use "vimwiki/vimwiki"
 
     use { "Vhyrro/neorg", branch = "unstable" }
+
 
     -- pretty sure I'm done w/ these
     -- local_use 'vlog.nvim'

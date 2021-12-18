@@ -13,6 +13,8 @@ nnoremap <Down> <C-e>
 " Switch between tabs
 nnoremap <Right> gt
 nnoremap <Left>  gT
+nnoremap L  $
+nnoremap H  ^
 
 inoremap <Up>     <C-o>:echom "--> k <-- "<CR>
 inoremap <Down>   <C-o>:echom "--> j <-- "<CR>
